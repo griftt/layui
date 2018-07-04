@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="layui/layui.js"></script>
+		<link rel="stylesheet" href="layui/css/layui.css" />
+		<style>
+			.size{width: 400px;}
+			.size2{width:700px;}
+		</style>
+	</head>
+	<body>
+		<div>
+			<div class="user">
+				<form class="layui-form" action="">
+					
+					  <div class="layui-form-item">
+					    <label class="layui-form-label">账号</label>
+					    <div class="layui-input-block">
+					    	<div class="size"> 
+					      <input type="text" name="title" required  lay-verify="required" placeholder="请输入账号" autocomplete="off" class="layui-input">
+					    	</div>
+					    	
+					    	</div>
+					  </div>
+  					
+  <div class="layui-form-item">
+    <label class="layui-form-label">密碼</label>
+    <div class="layui-input-block">
+    	<div class="size"> 
+      <input type="password" name="title" required  lay-verify="required" value="123456" lder="请输入密码" autocomplete="off" class="layui-input">
+   		</div> 
+    	</div>
+  </div>
+   <div class="layui-form-item">
+    <label class="layui-form-label">角色</label>
+    <div class="layui-input-block">
+    	<div class="size">
+    		
+    
+      <select name="city" lay-verify="required">
+        <option value=""></option>
+        <option value="0">北京</option>
+        <option value="1">上海</option>
+        <option value="2">广州</option>
+        <option value="3">深圳</option>
+        <option value="4">杭州</option>
+      </select>
+      	</div>
+    </div>
+  </div>
+  
+  
+
+  
+  
+  
+
+ 
+  <div class="layui-form-item">
+    <div class="layui-input-block">
+      <button class="layui-btn" lay-submit lay-filter="formDemo">确认添加</button>
+      <button type="reset" class="layui-btn layui-btn-primary">清空</button>
+    </div>
+  </div>
+</form>
+ 
+<script>
+//Demo
+layui.use('form', function(){
+  var form = layui.form;
+  
+  //监听提交
+  form.on('submit(formDemo)', function(data){
+    layer.msg(JSON.stringify(data.field));
+    return false;
+  });
+});
+</script>
+			</div>
+			
+		</div>
+		
+		
+	</body>
+</html>

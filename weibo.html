@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="layui/layui.js"></script>
+		<link rel="stylesheet" href="layui/css/layui.css" />
+		<style>
+			.size{width: 400px;}
+			.size2{width:700px;}
+		</style>
+	</head>
+	<body>
+		<div>
+			<div class="user">
+			</div>	
+ 
+<script>
+//Demo
+layui.use('form', function(){
+  var form = layui.form;
+  
+  //监听提交
+  form.on('submit(formDemo)', function(data){
+    layer.msg(JSON.stringify(data.field));
+    return false;
+  });
+});
+</script>
+			</div>
+			
+		</div>
+		
+		
+	</body>
+</html>
